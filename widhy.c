@@ -12,7 +12,7 @@ int main() {
   char opration[100];
   char input_user[BUFSIZE];
   printf("Welcome To Widhy-Language Version 1.0 \n>> ");
-  while (fgets(input, stdin)) {
+  while (gets(input)) {
   	input[strlen(input) - 1] = '\0';
     if (strncmp(input, "print", 5) == 0) {
       char *output = strtok(input + 6, "\n");
@@ -182,7 +182,6 @@ int main() {
 	} else {
       printf("Your Code Is Wrong.\n");
     }
-    printf(">> ");
   }
   return 0;
 }
